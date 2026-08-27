@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: #947706;
+background: #009150;
   color: #222;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
@@ -14,4 +14,115 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 32px 40px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(420px, 1.6fr);
+  align-items: center;
+  min-height: calc(100vh - 160px);
+  gap: clamp(32px, 5vw, 80px);
+}
+
+.sidebar {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(4rem, 10vw, 7rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.content > p {
+  margin: 0;
+  color: black;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.4;
+}
+
+.hammy{
+  color: #dad7cd;
+  font-style: italic;
+  font-family: Lucida Handwriting;
+  line-height: 0.6;
+}
+
+#interests {
+  margin-top: 65px;
+  width: 100%;
+}
+
+#interests h3 {
+  margin: 0 0 21px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+#interests ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#interests li {
+  color: #dad7cd;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 10px 20px;
+  background: #dad7cd;
+  border: 1px solid #dad7cd;
+  border-radius: 150px;
+  transition:
+    background 0.5s ease,
+    color .5s ease,
+    transform .5s ease;
+  cursor: help;
+}
+
+#interests li:hover {
+  background: #092328;
+  color: #dad7cd;
+  border-color: green;
+  transform: translateY(4px);
+}
+
+.sidebar-img {
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 3 / 4.5;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+  filter: grayscale(90%);
+  box-shadow: 0 30px 40px green;
+  transition:
+    filter 1s ease,
+    transform 1s ease,
+    box-shadow 1s ease;
+}
+
+.sidebar-img:hover {
+  filter: grayscale(0%);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px #74c69d;
 }
