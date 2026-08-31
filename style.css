@@ -109,7 +109,7 @@ h2 {
 .sidebar-img {
   width: 100%;
   max-width: 760px;
-  aspect-ratio: 3 / 4.5;
+  aspect-ratio: 5.5/7.5;
   object-fit: cover;
   display: block;
   border-radius: 30px;
@@ -125,4 +125,73 @@ h2 {
   filter: grayscale(0%);
   transform: translateY(-3px);
   box-shadow: 0 16px 40px #74c69d;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  padding: 15px 60px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.144);
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
+              inset 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(1px);
+  box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+              inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 1;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+nav h1 {
+  margin: 10;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+#nav-ul {
+  list-style: none;
+  display: flex;
+  gap: 0px;
+  margin: 0;
+  padding: 5;
+}
+
+.nav-li a {
+  color: #363636;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 800;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition:
+    background 0.25s ease,
+    color 0.35s ease;
+}
+
+.nav-li a:hover {
+  backdrop-filter: blur(2px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
+              inset 0 4px 20px rgba(255, 255, 255, 0.3);
 }
