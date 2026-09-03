@@ -43,21 +43,34 @@ $(function () {
     createPlatform(55, 97, 73, 1, "cyan");
     createPlatform(170, 50, 10, 100, "blue");
     createPlatform(160, 150, 56, 50, "lime");
-    createPlatform();
-    createBadPlatform(0, 700, 1400, 0.1);
-    createPlatform(50,349,40,10,"pink")
-    createPlatform(5,260,4,500,"cyan")
-    createPlatform(110,260,1,350,"cyan")
-    createPlatform(50,450,40,10,"pink")
-    createPlatform()
+    createBadPlatform(0, 730, 1400, 20, "#b0ece1");
+    createFakePlatform(50,349,40,10,"pink");
+    createPlatform(5,260,9,500,"cyan");
+    createFakePlatform(110,260,1,350,"cyan");
+    createFakePlatform(50,450,40,10,"pink");
+    createPlatform(230,700,70,10,"yellow",200,500,100);
+    createBadPlatform(50,700,60,10,"red");
+    createBadPlatform(30,539,85,10);
+    createPlatform(200,200,10,400,"#00b3ff");
+    createPlatform(110,710,70,10,"blue");
+    createPlatform(630,700,70,10,"red",600,700,200);
+
+    
+    // invisible platform color
+    // "#b0ece1"
+
+
+    
     // TODO 3 - Create Collectables
-    createCollectable("excel",115.5,50)
-    createCollectable("word",500,500)
+    createCollectable("excel",115.5,50);
+    createCollectable("word",50,620);
+    createCollectable("steve", 1350, 50);
 
     // TODO 4 - Create Cannons
 
-    createCannon("top", 200, 300);
+    createCannon("top", 200, 4000);
     createCannon("left", 196, 4000);
+    createCannon("left", 350,4000)
 
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
