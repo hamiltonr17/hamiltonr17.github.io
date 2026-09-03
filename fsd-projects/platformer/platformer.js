@@ -49,7 +49,7 @@ $(function () {
     createPlatform(5,260,4,500,"cyan")
     createPlatform(110,260,1,350,"cyan")
     createPlatform(50,450,40,10,"pink")
-
+    createPlatform()
     // TODO 3 - Create Collectables
     createCollectable("excel",115.5,50)
     createCollectable("word",500,500)
