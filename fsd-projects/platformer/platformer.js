@@ -49,11 +49,16 @@ $(function () {
     createFakePlatform(110,260,1,350,"cyan");
     createFakePlatform(50,450,40,10,"pink");
     createPlatform(230,700,70,10,"yellow",200,500,100);
-    createBadPlatform(50,700,60,10,"red");
+    createBadPlatform(50,710,60,10,"blue");
     createBadPlatform(30,539,85,10);
     createPlatform(200,200,10,400,"#00b3ff");
     createPlatform(110,710,70,10,"blue");
     createPlatform(630,700,70,10,"red",600,700,200);
+    createPlatform(810,700,150,10,"darkgreen",900,1100,1,400,700);
+    createPlatform(1100,300,100,10,"red");
+    createPlatform(1000,480,80,10,"blue");
+    createPlatform(950,350,100,10,"pink");
+    createPlatform(1250,500,70,10,"crimson",1200,1250,1,100,500)
 
     
     // invisible platform color
@@ -64,13 +69,13 @@ $(function () {
     // TODO 3 - Create Collectables
     createCollectable("excel",115.5,50);
     createCollectable("word",50,620);
-    createCollectable("steve", 1350, 50);
+    createCollectable("onenotey", 1350, 50);
 
     // TODO 4 - Create Cannons
 
     createCannon("top", 200, 4000);
-    createCannon("left", 196, 4000);
-    createCannon("left", 350,4000)
+    createCannon("left", 196, 40000);
+    createCannon("left", 350,40000)
 
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //

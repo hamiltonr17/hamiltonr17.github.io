@@ -102,5 +102,6 @@ var collectableList = {
   max: { image: "images/collectables/max-head.png" },
   steve: { image: "images/collectables/steve-head.png" },
   excel: {image: "images/collectables/excel.png"},
-  word: {image: "images/collectables/word.png"}
+  word: {image: "images/collectables/word.png"},
+  onenotey: {image: "images/collectables/onenotey.png"},
 };
