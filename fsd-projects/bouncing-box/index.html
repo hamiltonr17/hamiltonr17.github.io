@@ -21,6 +21,7 @@
 
       .board {
         height: 100vh;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0_6S9RRvb-HcNffhsVoRYXuWCOrE0u6v1slKDwRM8AqE9C9T52XmzUH8M&s=10)
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -55,8 +56,9 @@
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        function moveBoxTo(newPositionX, newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY)
         }
 
         // changes the text displayed on the Box
@@ -72,7 +74,10 @@
         var positionX = 100
         var points = 0
         var speed = 5
-
+        var positionY = 400
+        var speedY
+        var borderHeight = jQuery(window).height()
+        var randNum = Math.random()*100
 
 
 
@@ -83,7 +88,7 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-        moveBoxTo(positionX)
+        moveBoxTo(positionX, positionY)
         positionX += speed
         if (positionX > boardWidth) {
           speed *= -1
@@ -91,12 +96,11 @@
 
         else if (positionX < 0) {
           speed *= -1
+        
+        positionY += speed
+        if (positionY > boardLength){
+          speed *= -1
         }
-
-
-          
-        }
-
         /**
          * This Function will be called each time the box is clicked.
          * Each time it is called, it should perform each of the following actions:
