@@ -3,25 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <title>Bouncing Box</title>
-    <script src="jquery.min.js"></script>
+    <script src="jquery.min.js">
+    </script>
     <style>
       .box {
-        width: 70px;
-        height: 70px;
+        width:100px;
+        height: 100px;
         background-color: teal;
         font-size: 300%;
         text-align: center;
         user-select: none;
         display: block;
+        background-image: url(https://static.vecteezy.com/system/resources/thumbnails/081/861/610/small/mondrian-style-geometric-grid-with-red-blue-yellow-and-white-rectangles-abstract-pattern-vector.jpg);
         position: absolute;
         top: 100px;
         /* Change me! */
         left: 0px;
       }
-
+      
+      .text {
+        font-size: 110%;
+        font-style: italic;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        font-size: clamp(2rem, 8vw, 3rem);
+        line-height: 0.9;
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: white;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
+      }
       .board {
         height: 100vh;
-        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0_6S9RRvb-HcNffhsVoRYXuWCOrE0u6v1slKDwRM8AqE9C9T52XmzUH8M&s=10)
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5GqZMx5I5bxm4F7OTttr7eNyvMpaw0CqoaP841Qa8bWXHx650MOZGEUG5&s=10)
+
+
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -29,7 +47,9 @@
 
   <body class="board">
     <!-- HTML for the box -->
-    <div class="box">?</div>
+  <div class="box">?</div>
+  <p class="text"> hi! welcome to bouncing box (by hammy, duh) </p>
+  <p class="text"> don't misclick >10 times, or else </p>
 
     <script>
       (function () {
@@ -51,8 +71,11 @@
         });
 
         // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 50);
+        var interval = setInterval(update, 50);
 
+        function endGame() {
+         clearInterval(interval);
+}
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
 
@@ -77,6 +100,8 @@
         var speed = 5
         var positionY = 100
         var speedY = 10
+        var misclick = 0 
+        
 
 
 
@@ -114,11 +139,16 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-        speed = 3 * points + 10
-        positionX = 0
+        if (points%3 == 0){
+          speed = 3 * points + 10
+        }      
+        var randNum = Math.random() * 0.75*boardWidth;
+        positionX = randNum
+        positionY = randNum
         points++
         changeBoxText(points)
         }
+
 
         })();
     </script>
