@@ -99,7 +99,7 @@
         var points = 0
         var speed = 5
         var positionY = 100
-        var speedY = 10
+        var speedY = 5
         var misclick = 0 
         
 
@@ -116,7 +116,7 @@
         moveBoxTo(positionX, positionY)
         positionX += speed
         positionY += speedY
-        if (positionX > boardWidth) {
+        if (positionX > boardWidth ) {
           speed *= -1
         }
         if (positionX < 0){

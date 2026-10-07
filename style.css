@@ -253,3 +253,7 @@ a{
 #portfolio a:hover::after {
   opacity: 1;
 }
+
+.gallery_label {
+  font-size: 5rem;
+}
