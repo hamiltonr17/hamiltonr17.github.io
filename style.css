@@ -257,3 +257,17 @@ a{
 .gallery_label {
   font-size: 5rem;
 }
+
+.pics{
+  color: #222;
+  font-family: Lucida Handwriting;
+  margin-bottom: 10px;
+  font-size: clamp(1rem, 5vw, 4rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  text-align: center;
+}
+
